@@ -4,3 +4,5 @@
   </h1>
 </template>
 
+Camel Notation :- oneTwoThree
+Pascal Notation :- OneTwoThree
