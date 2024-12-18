@@ -1,31 +1,14 @@
 <template>
+  <h2>JS</h2>
 
-  
-  <h1>
-    Docs
-  </h1>
+  <a href="https://htmlcheatsheet.com/">htmlcheatsheet.com</a> <br>
+  <a href=" https://www.regexpal.com/">regexpal.com</a>
 
-  <a href="https://htmlcheatsheet.com/">htmlcheatsheet.com</a>
-
-  
-  <p>
-    Camel Notation :- oneTwoThree
-  </p>
-  <p>
-    Pascal Notation :- OneTwoThree
-  </p>
-
-
-<h1>
-  JS
-</h1>
-
-<code>
-  <script type="text/javascript"> </script>
-</code>
-
-<div v-html="html_content"></div>
-
+  <br>
+  <p>Camel Notation :- oneTwoThree</p>
+  <p>Pascal Notation :- OneTwoThree</p>
+  <p>Clean Architecture :- <a href="https://www.techtarget.com/whatis/definition/clean-architecture">Link</a> </p>
+  <p>JS Data Types :- <img src="../assets/js_data_types.png"></p>
 </template>
 
 

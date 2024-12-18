@@ -4,9 +4,12 @@ import { ref, computed } from 'vue'
 import HelloWorld from './components/HelloWorld.vue';
 import CodingDocs from './components/CodingDocs.vue';
 import NotFound from './components/NotFound.vue';
+import WorkoutComponent from './components/WorkoutComponent.vue';
+
 
 const routes = {
   '/': HelloWorld,
+  '/workout' : WorkoutComponent,
   '/docs': CodingDocs
 }
 
@@ -22,8 +25,10 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <a href="#/">Home</a> |
-  <a href="#/docs">About</a> |
-  <a href="#/non-existent-path">Broken Link</a>
+  <!-- <a href="#/">Home</a> | -->
+  <a href="#/workout">Workout</a> |
+  <a href="#/jobsearch">Job Search</a> |
+  <a href="#/docs">Docs</a> |
+  <!-- <a href="#/non-existent-path">Broken Link</a> -->
   <component :is="currentView" />
 </template>
