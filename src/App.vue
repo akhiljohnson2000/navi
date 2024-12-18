@@ -1,10 +1,4 @@
 <script>
-// const routes = {
-//   '/': HelloWorld,
-//   '/workout' : WorkoutComponent,
-//   '/docs': CodingDocs
-// }
- 
 export default {
   name: "App",
 };
