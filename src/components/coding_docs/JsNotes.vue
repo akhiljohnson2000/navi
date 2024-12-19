@@ -16,6 +16,7 @@
     <button class="btn btn-link" data-bs-target="#js_needed_webpages" data-bs-toggle="collapse"> WebPages </button>
     <div class="collapse" style="padding-left: 50px;" id="js_needed_webpages">
         <br>
+        <a href="https://playcode.io/">https://playcode.io/</a>
         <a href="https://htmlcheatsheet.com/">htmlcheatsheet.com</a> <br>
         <a href="https://cheatography.com/davechild/cheat-sheets/javascript/pdf/?last=1462956370">cheatography.com</a>
         <br>
