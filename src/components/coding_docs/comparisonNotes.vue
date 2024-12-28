@@ -1,9 +1,6 @@
 <template>
-    <h2>JS</h2> <br>
+    <h2>Comparison</h2>
 
-    Basic Syntax | DOM Manipulation | Fetch API/Ajax | Async Await | Event Listeners | ES6 + Javascript | Promises | Classes | Array Methods | Scoping | Hoisting | Closures <br>
-
-    FrameWorks :- React, Vue, Angular, Svelte, Meteor, Remix
     <button class="btn btn-link" data-bs-target="#js_introduction" data-bs-toggle="collapse"> Introduction </button>
     <div class="collapse" style="padding-left: 50px;" id="js_introduction">
         JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. <br>
