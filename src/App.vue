@@ -2,7 +2,19 @@
 export default {
   name: "App",
 };
+
 </script>
+
+<style>
+a{
+  color: white !important;
+}
+
+body{
+  color: white !important;
+}
+
+</style>
 
 <template>
   <p>
