@@ -11,7 +11,8 @@
     <router-link to="/docs/react">React </router-link> | 
     <router-link to="/docs/nextJs">Next JS </router-link> | 
     <router-link to="/docs/testing">Testing </router-link>
-
+    <router-link to="/docs/deployment">Deployment </router-link>
+    <router-link to="/docs/general">General </router-link>
     <br />
   </p>
   <router-view></router-view>

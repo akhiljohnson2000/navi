@@ -11,6 +11,8 @@ import ComparisonNotes from '@/components/coding_docs/comparisonNotes.vue'
 import ReactNotes from '@/components/coding_docs/reactNotes.vue'
 import NextjsNotes from '@/components/coding_docs/nextjsNotes.vue'
 import TestingNotes from '@/components/coding_docs/testingNotes.vue'
+import DeploymentNotes from '@/components/coding_docs/deploymentNotes.vue'
+import GeneralTopicNotes from '@/components/coding_docs/generalTopicNotes.vue'
 
 export const AppRouter = createRouter({
   history: createWebHistory(),
@@ -31,8 +33,9 @@ export const AppRouter = createRouter({
         { path: 'comparision', component: ComparisonNotes },
         { path: 'react', component: ReactNotes },
         { path: 'nextJs', component: NextjsNotes },
-        { path: 'testing', component: TestingNotes }
-
+        { path: 'testing', component: TestingNotes },
+        { path: 'deployment', component: DeploymentNotes },
+        { path: 'general', component: GeneralTopicNotes }
       ],
     },
     {
