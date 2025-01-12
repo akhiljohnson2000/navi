@@ -13,6 +13,7 @@ import NextjsNotes from '@/components/coding_docs/nextjsNotes.vue'
 import TestingNotes from '@/components/coding_docs/testingNotes.vue'
 import DeploymentNotes from '@/components/coding_docs/deploymentNotes.vue'
 import GeneralTopicNotes from '@/components/coding_docs/generalTopicNotes.vue'
+import DockerNotes from '@/components/coding_docs/dockerNotes.vue'
 
 export const AppRouter = createRouter({
   history: createWebHistory(),
@@ -35,7 +36,8 @@ export const AppRouter = createRouter({
         { path: 'nextJs', component: NextjsNotes },
         { path: 'testing', component: TestingNotes },
         { path: 'deployment', component: DeploymentNotes },
-        { path: 'general', component: GeneralTopicNotes }
+        { path: 'general', component: GeneralTopicNotes },
+        { path: 'docker', component: DockerNotes }
       ],
     },
     {

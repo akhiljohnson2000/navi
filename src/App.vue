@@ -12,6 +12,7 @@ a{
 
 body{
   color: white !important;
+  background-color:#18514b !important;
 }
 
 </style>
