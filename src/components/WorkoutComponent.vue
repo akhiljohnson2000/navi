@@ -1,141 +1,256 @@
-<script setup>
-    const d = new Date();
-    let day = d.getDay()
+<template>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
+    <h1 class="text-3xl font-bold mb-4">Weekly Workout Plan</h1>
+    <div v-if="isWorkoutComplete" class="text-center">
+      <h2 class="text-2xl text-green-600">Workout Complete for Today! Great Job!</h2>
+    </div>
+    <div v-else class="text-center">
+      <h2 class="text-xl font-semibold mb-2">{{ currentStep.activity_title }}</h2>
+      <p class="mb-4">{{ currentStep.activity_desc || 'Follow the instructions.' }}</p>
+      <p class="text-gray-600 mb-4">Duration: {{ currentStep.time_duration }} minute(s)</p>
+      <div class="relative w-32 h-32 mb-4">
+        <!-- <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+          <path class="text-gray-300 stroke-current" fill="none" stroke-width="3" d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831" />
+          <path class="text-blue-600 stroke-current" fill="none" stroke-width="3"
+            :stroke-dasharray="(timer / (currentStep.time_duration * 60)) * 100 + ', 100'" d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg> -->
+        <p class="absolute inset-0 flex items-center justify-center text-xl font-bold">
+          {{ Math.floor(timer / 60) }}:{{ (timer % 60).toString().padStart(2, '0') }}
+        </p>
+      </div>
+      <div v-if="currentStep.gif_url">
+        <img :src="require(`../assets/gifs/${currentStep.gif_url}.gif`)" alt="Workout Demo"/>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      "workoutPlans": {
+        "Monday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Jogging in place.",
+            "time_duration": 5,
+            "gif_url": "../../assets/gifs/jogging-in-place.gif"
+          },
+          {
+            "activity_title": "Dumbbell Curls",
+            "activity_desc": "Perform bicep curls with dumbbells.",
+            "time_duration": 2,
+            "gif_url": "/assets/gifs/dumbbell-curls.gif"
+          },
+          {
+            "activity_title": "Push-ups",
+            "activity_desc": "Perform regular or knee push-ups.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/push-ups.gif"
+          },
+          {
+            "activity_title": "Plank",
+            "activity_desc": "Hold a plank position.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/plank.gif"
+          }
+        ],
+        "Tuesday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Light stretches.",
+            "time_duration": 5,
+            "gif_url": "/assets/gifs/light-stretches.gif"
+          },
+          {
+            "activity_title": "Dumbbell Shoulder Press",
+            "activity_desc": "Press dumbbells overhead.",
+            "time_duration": 2,
+            "gif_url": "/assets/gifs/dumbbell-shoulder-press.gif"
+          },
+          {
+            "activity_title": "Jumping Jacks",
+            "activity_desc": "Perform jumping jacks.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/jumping-jacks.gif"
+          },
+          {
+            "activity_title": "Squats",
+            "activity_desc": "Perform bodyweight squats.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/squats.gif"
+          }
+        ],
+        "Wednesday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Arm circles.",
+            "time_duration": 5,
+            "gif_url": "arm-circles"
+          },
+          {
+            "activity_title": "Dumbbell Deadlifts",
+            "activity_desc": "Lift dumbbells from the ground with proper form.",
+            "time_duration": 2,
+            "gif_url": "dumbbell-deadlifts"
+          },
+          {
+            "activity_title": "Burpees",
+            "activity_desc": "Perform burpees.",
+            "time_duration": 1,
+            "gif_url": "burpees"
+          },
+          {
+            "activity_title": "Lunges",
+            "activity_desc": "Perform alternating lunges.",
+            "time_duration": 1,
+            "gif_url": "lunges"
+          }
+        ],
+        "Thursday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Jumping in place.",
+            "time_duration": 5,
+            "gif_url": "jumping-in-place"
+          },
+          {
+            "activity_title": "Dumbbell Rows",
+            "activity_desc": "Perform rows with dumbbells.",
+            "time_duration": 2,
+            "gif_url": "/assets/gifs/dumbbell-rows.gif"
+          },
+          {
+            "activity_title": "Push-ups",
+            "activity_desc": "Perform push-ups.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/push-ups.gif"
+          },
+          {
+            "activity_title": "Mountain Climbers",
+            "activity_desc": "Perform mountain climbers.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/mountain-climbers.gif"
+          }
+        ],
+        "Friday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Jogging in place.",
+            "time_duration": 5,
+            "gif_url": "/assets/gifs/jogging-in-place.gif"
+          },
+          {
+            "activity_title": "Dumbbell Squats",
+            "activity_desc": "Perform squats holding dumbbells.",
+            "time_duration": 2,
+            "gif_url": "/assets/gifs/dumbbell-squats.gif"
+          },
+          {
+            "activity_title": "Jump Squats",
+            "activity_desc": "Perform jump squats.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/jump-squats.gif"
+          },
+          {
+            "activity_title": "Plank",
+            "activity_desc": "Hold a plank position.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/plank.gif"
+          }
+        ],
+        "Saturday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Dynamic stretches.",
+            "time_duration": 5,
+            "gif_url": "/assets/gifs/dynamic-stretches.gif"
+          },
+          {
+            "activity_title": "Dumbbell Lateral Raises",
+            "activity_desc": "Raise dumbbells to the side.",
+            "time_duration": 2,
+            "gif_url": "/assets/gifs/dumbbell-lateral-raises.gif"
+          },
+          {
+            "activity_title": "High Knees",
+            "activity_desc": "Perform high knees.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/high-knees.gif"
+          },
+          {
+            "activity_title": "Push-ups",
+            "activity_desc": "Perform push-ups.",
+            "time_duration": 1,
+            "gif_url": "/assets/gifs/push-ups.gif"
+          }
+        ],
+        "Sunday": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Light stretches.",
+            "time_duration": 5,
+            "gif_url": "/assets/gifs/light-stretches.gif"
+          },
+          {
+            "activity_title": "Cool Down",
+            "activity_desc": "Stretch major muscles.",
+            "time_duration": 5,
+            "gif_url": "/assets/gifs/cool-down.gif"
+          }
+        ]
+      },
+      currentDay: new Date().toLocaleString('en-US', { weekday: 'long' }),
+      currentStep: {},
+      timer: 0,
+      isWorkoutComplete: false,
+    };
+  },
+  methods: {
+    sleep(seconds) {
+      return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+    },
+    async startWorkout() {
+      const todayWorkout = this.workoutPlans[this.currentDay] || [];
+
+      for (const step of todayWorkout) {
+        await this.executeStep(step);
+      }
+
+      this.isWorkoutComplete = true;
+    },
+    async executeStep(step) {
+      this.currentStep = step;
+      this.timer = step.time_duration * 60;
+
+      while (this.timer > 0) {
+        await this.sleep(1);
+        this.timer--;
+      }
+    },
+  },
+  mounted() {
+    this.startWorkout();
+  },
+};
 </script>
 
-<template>
-    <br>
-    <br>
-    <div :style="{'font-size': '40px'}">Today :
-    <span v-if="day == 0">Sunday</span>
-    <span v-if="day == 1">Monday</span>
-    <span v-if="day == 2">Tuesday</span>
-    <span v-if="day == 3">Wednesday</span>
-    <span v-if="day == 4">Thursday</span>
-    <span v-if="day == 5">Friday</span>
-    <span v-if="day == 6">Saturday</span></div>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
+svg {
+  transform: rotate(-90deg);
+}
 
-    <br>
-    <br>
-    Warm-up (5 minutes): Do light cardio, such as jogging in place, jumping jacks, or arm circles before each workout.
-    <br>
-    Cool down (5 minutes): Stretch major muscle groups to aid recovery.
-    <br>
-    Perform the exercises as a circuit, resting for 15-30 seconds between moves.
-
-    <br>
-    <br>
-
-    <span v-if="day == 0">
-        <span :style="{'font-size': '30px'}">
-            Full-Body Fat Burn
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Repeat the circuit 3 times
-        </span><br>
-        <span>
-            Jumping Jacks – 40 seconds <br>
-            Push-ups (knees optional) – 12 reps <br>
-            Squats – 15 reps <br>
-            High Knees – 40 seconds <br>
-            Plank Hold – 30 seconds <br>
-        </span><br>
-    </span>
-
-    <span v-if="day == 1">
-        <span :style="{'font-size': '30px'}">
-            Lower Body Focus
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Perform each exercise for 40 seconds, rest 20 seconds, repeat 3 times
-        </span><br>
-        <span>
-            Bodyweight Lunges (alternating legs) – 12 reps per leg <br>
-            Glute Bridges – 15 reps <br>
-            Jump Squats – 12 reps <br>
-            Wall Sit – 30 seconds <br>
-            Calf Raises – 20 reps <br>
-        </span><br>
-
-    </span>
-
-    <span v-if="day == 2">
-        <span :style="{'font-size': '30px'}">
-            Cardio Blast
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Repeat the circuit 3 times
-        </span><br>
-        <span>
-            Burpees <br>
-            Mountain Climbers <br>
-            Skaters (side-to-side lunges with a jump) <br>
-            Jumping Jacks <br>
-            Shadow Boxing <br>
-        </span><br>
-
-    </span>
-
-    <span v-if="day == 3">
-        <span :style="{'font-size': '30px'}">
-            Upper Body & Core
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Repeat the circuit 3 times
-        </span><br>
-        <span>
-            Push-ups – 10-12 reps <br>
-            Tricep Dips (use a chair) – 10-12 reps <br>
-            Superman Hold (lie on stomach, lift arms and legs) – 30 seconds <br>
-            Russian Twists (with or without a weight) – 20 twists <br>
-            Plank Shoulder Taps – 20 taps <br>
-        </span><br>
-
-    </span>
-
-    <span v-if="day == 4">
-        <span :style="{'font-size': '30px'}">
-            Core & Abs
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Repeat the circuit 3 times
-        </span><br>
-        <span>
-            Bicycle Crunches – 20 reps <br>
-            Leg Raises – 12 reps <br>
-            Plank with Hip Dips – 12 dips<br>
-            Flutter Kicks – 40 seconds <br>
-            Sit-ups – 15 reps <br>
-        </span><br>
-
-    </span>
-
-    <span v-if="day == 5">
-        <span :style="{'font-size': '30px'}">
-            Active Recovery (Low-Impact)
-        </span><br>
-        <span>
-            30-minute brisk walk, yoga, or stretching <br>
-            Focus on improving flexibility and letting your muscles recover. <br>
-        </span><br>
-    </span>
-
-    <span v-if="day == 6">
-        <span :style="{'font-size': '30px'}">
-            Full-Body HIIT (High-Intensity Interval Training)
-        </span><br>
-        <span :style="{'font-size': '20px'}">
-            Perform each move for 45 seconds, rest for 15 seconds, repeat the circuit 3 times
-        </span><br>
-        <span>
-            Jumping Lunges <br>
-            Push-ups <br>
-            Squat Jumps <br>
-            Plank to Push-up <br>
-            Burpees <br>
-        </span><br>
-
-    </span>
-
-</template>
+path {
+  transition: stroke-dasharray 0.5s ease;
+}
+</style>
