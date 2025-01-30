@@ -123,13 +123,13 @@ export default {
             "activity_title": "Dumbbell Rows",
             "activity_desc": "Perform rows with dumbbells.",
             "time_duration": 2,
-            "gif_url": "/assets/gifs/dumbbell-rows.gif"
+            "gif_url": "dumbbell-rows"
           },
           {
             "activity_title": "Push-ups",
             "activity_desc": "Perform push-ups.",
             "time_duration": 1,
-            "gif_url": "/assets/gifs/push-ups.gif"
+            "gif_url": "push-ups"
           },
           {
             "activity_title": "Mountain Climbers",
