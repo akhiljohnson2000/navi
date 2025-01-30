@@ -237,7 +237,7 @@ export default {
             "activity_title": "Mountain Climbers",
             "activity_desc": "Perform mountain climbers.",
             "time_duration": 1,
-            "gif_url": "/assets/gifs/mountain-climbers.gif"
+            "gif_url": "mountain-climbers"
           }
         ],
         "Friday": [
