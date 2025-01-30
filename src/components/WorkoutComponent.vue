@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
-    <h1 class="text-3xl font-bold mb-4">Weekly Workout Plan</h1>
-    <p>{{ randomQuote }}</p>
+    <h1 class="text-3xl font-bold mb-4">{{ randomQuote }}</h1>
     <div v-if="isWorkoutComplete" class="text-center">
       <h2 class="text-2xl text-green-600">Workout Complete for Today! Great Job!</h2>
     </div>
