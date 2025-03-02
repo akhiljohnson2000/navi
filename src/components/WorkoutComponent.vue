@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
-    <h1 class="text-3xl font-bold mb-4">{{ randomQuote }}</h1>
     <div v-if="isWorkoutComplete" class="text-center">
       <h2 class="text-2xl text-green-600">Workout Complete for Today! Great Job!</h2>
     </div>
     <div v-else class="text-center">
+      <h1 class="text-3xl font-bold mb-4">{{ randomQuote }}</h1>
       <h2 class="text-xl font-semibold mb-2">{{ currentStep.activity_title }}</h2>
       <p class="mb-4">{{ currentStep.activity_desc || 'Follow the instructions.' }}</p>
       <p class="text-gray-600 mb-4">Duration: {{ currentStep.time_duration }} minute(s)</p>
@@ -305,9 +305,60 @@ export default {
             "time_duration": 5,
             "gif_url": "/assets/gifs/cool-down.gif"
           }
+        ],
+        "Common": [
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Light stretches/Jogging in place",
+            "time_duration": 1,
+            "gif_url": ""
+          },
+          {
+            "activity_title": "Warmup",
+            "activity_desc": "Arm circles.",
+            "time_duration": 1,
+            "gif_url": "arm-circles"
+          },
+          {
+            "activity_title": "Push-ups",
+            "activity_desc": "Perform push-ups.",
+            "time_duration": 1,
+            "gif_url": "push-ups"
+          },
+          {
+            "activity_title": "REST",
+            "activity_desc": "Take some rest.",
+            "time_duration": 1,
+            "gif_url": ""
+          },
+          {
+            "activity_title": "Dumbbell Deadlifts",
+            "activity_desc": "Lift dumbbells from the ground with proper form.",
+            "time_duration": 1,
+            "gif_url": "dumbbell-deadlifts"
+          },
+          {
+            "activity_title": "Burpees",
+            "activity_desc": "Perform burpees.",
+            "time_duration": 1,
+            "gif_url": "burpees"
+          },
+          {
+            "activity_title": "Lunges",
+            "activity_desc": "Perform alternating lunges.",
+            "time_duration": 1,
+            "gif_url": "lunges"
+          },
+          {
+            "activity_title": "REST",
+            "activity_desc": "Take some rest.",
+            "time_duration": 1,
+            "gif_url": ""
+          }
         ]
       },
-      currentDay: new Date().toLocaleString('en-US', { weekday: 'long' }),
+      currentDay: "Common", 
+      // new Date().toLocaleString('en-US', { weekday: 'long' })
       currentStep: {},
       timer: 0,
       isWorkoutComplete: false,
