@@ -1,0 +1,562 @@
+{
+  "user": {
+    "name": "Akhil Johnson",
+    "height": "5.5",
+    "weight": 100,
+    "age": 29,
+    "gender": "male",
+    "fitnessLevel": "beginner",
+    "goals": {
+      "primaryGoal": "weight-loss",
+      "workoutDaysPerWeek": 5,
+      "workoutDuration": 60
+    },
+    "preferences": {
+      "workoutReminders": true,
+      "weightReminders": true,
+      "soundEffects": true,
+      "darkMode": false
+    },
+    "streak": {
+      "current": 4,
+      "longest": 7,
+      "lastWorkoutDate": "2023-03-28"
+    }
+  },
+  "equipment": [
+    {
+      "name": "Dumbbells",
+      "details": "2 x 2.5kg",
+      "available": true
+    },
+    {
+      "name": "Roller",
+      "details": "Ab roller",
+      "available": true
+    },
+    {
+      "name": "Pushup Handles",
+      "details": "Ergonomic handles",
+      "available": true
+    },
+    {
+      "name": "Resistance Bands",
+      "details": "Set of 3 bands",
+      "available": false
+    },
+    {
+      "name": "Yoga Mat",
+      "details": "Standard size",
+      "available": false
+    }
+  ],
+  "weightEntries": [
+    { "date": "2023-01-01", "weight": 100 },
+    { "date": "2023-01-08", "weight": 99.5 },
+    { "date": "2023-01-15", "weight": 99.2 },
+    { "date": "2023-01-22", "weight": 98.8 },
+    { "date": "2023-01-29", "weight": 98.3 },
+    { "date": "2023-02-05", "weight": 98.1 },
+    { "date": "2023-02-12", "weight": 97.7 },
+    { "date": "2023-02-19", "weight": 97.2 },
+    { "date": "2023-02-26", "weight": 96.8 },
+    { "date": "2023-03-05", "weight": 96.5 },
+    { "date": "2023-03-12", "weight": 96.0 },
+    { "date": "2023-03-19", "weight": 95.7 },
+    { "date": "2023-03-26", "weight": 95.3 }
+  ],
+  "workoutHistory": [
+    { "date": "2023-03-01", "completed": true, "type": "Full Body" },
+    { "date": "2023-03-02", "completed": true, "type": "Upper Body" },
+    { "date": "2023-03-03", "completed": false, "type": "Rest Day" },
+    { "date": "2023-03-04", "completed": true, "type": "Lower Body" },
+    { "date": "2023-03-05", "completed": true, "type": "Core & Cardio" },
+    { "date": "2023-03-06", "completed": false, "type": "Rest Day" },
+    { "date": "2023-03-07", "completed": true, "type": "Full Body" },
+    { "date": "2023-03-08", "completed": true, "type": "Upper Body" },
+    { "date": "2023-03-09", "completed": true, "type": "Lower Body" },
+    { "date": "2023-03-10", "completed": false, "type": "Missed" },
+    { "date": "2023-03-11", "completed": true, "type": "Full Body" },
+    { "date": "2023-03-12", "completed": true, "type": "Core & Cardio" },
+    { "date": "2023-03-13", "completed": false, "type": "Rest Day" },
+    { "date": "2023-03-14", "completed": true, "type": "Upper Body" },
+    { "date": "2023-03-15", "completed": true, "type": "Lower Body" },
+    { "date": "2023-03-16", "completed": false, "type": "Missed" },
+    { "date": "2023-03-17", "completed": true, "type": "Full Body" },
+    { "date": "2023-03-18", "completed": true, "type": "Core & Cardio" },
+    { "date": "2023-03-19", "completed": false, "type": "Rest Day" },
+    { "date": "2023-03-20", "completed": true, "type": "Upper Body" },
+    { "date": "2023-03-21", "completed": true, "type": "Lower Body" },
+    { "date": "2023-03-22", "completed": false, "type": "Missed" },
+    { "date": "2023-03-23", "completed": true, "type": "Full Body" },
+    { "date": "2023-03-24", "completed": true, "type": "Core & Cardio" },
+    { "date": "2023-03-25", "completed": false, "type": "Rest Day" },
+    { "date": "2023-03-26", "completed": true, "type": "Upper Body" },
+    { "date": "2023-03-27", "completed": true, "type": "Lower Body" },
+    { "date": "2023-03-28", "completed": false, "type": "Missed" }
+  ],
+  "workouts": {
+    "strength": [
+      {
+        "name": "Warm-up",
+        "duration": 300,
+        "description": "Light cardio and dynamic stretching to prepare your body",
+        "instructions": [
+          "March in place for 1 minute",
+          "Arm circles (forward and backward) for 1 minute",
+          "Bodyweight squats for 1 minute",
+          "Lunges (alternating legs) for 1 minute",
+          "Light stretching for 1 minute"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Dumbbell Squats",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Lower body exercise focusing on quads, hamstrings, and glutes",
+        "instructions": [
+          "Hold dumbbells at your sides",
+          "Stand with feet shoulder-width apart",
+          "Lower your body as if sitting in a chair",
+          "Keep your back straight and chest up",
+          "Push through your heels to return to standing"
+        ],
+        "equipment": ["dumbbells"]
+      },
+      {
+        "name": "Push-ups with Handles",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Upper body exercise targeting chest, shoulders, and triceps",
+        "instructions": [
+          "Place pushup handles shoulder-width apart",
+          "Start in plank position with hands on handles",
+          "Lower your chest toward the ground",
+          "Push back up to starting position",
+          "Keep your core tight throughout the movement"
+        ],
+        "equipment": ["pushup handles"]
+      },
+      {
+        "name": "Dumbbell Rows",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Back exercise that also engages biceps and shoulders",
+        "instructions": [
+          "Place one knee and hand on a bench or chair",
+          "Hold dumbbell in other hand",
+          "Pull dumbbell up to your side",
+          "Lower with control",
+          "Complete all reps on one side before switching"
+        ],
+        "equipment": ["dumbbells"]
+      },
+      {
+        "name": "Roller Ab Workout",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Core strengthening exercise using the ab roller",
+        "instructions": [
+          "Start on your knees with the roller in front of you",
+          "Roll forward as far as you can while maintaining control",
+          "Use your core to pull yourself back to starting position",
+          "For beginners, don't extend fully",
+          "For advanced, try from a standing position"
+        ],
+        "equipment": ["roller"]
+      },
+      {
+        "name": "Dumbbell Lunges",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Lower body exercise targeting quads, hamstrings, and glutes",
+        "instructions": [
+          "Hold dumbbells at your sides",
+          "Step forward with one leg",
+          "Lower your body until both knees are at 90-degree angles",
+          "Push through front heel to return to starting position",
+          "Alternate legs"
+        ],
+        "equipment": ["dumbbells"]
+      },
+      {
+        "name": "Cool Down",
+        "duration": 300,
+        "description": "Static stretching to improve flexibility and reduce muscle soreness",
+        "instructions": [
+          "Quad stretch (30 seconds each leg)",
+          "Hamstring stretch (30 seconds each leg)",
+          "Chest stretch (30 seconds)",
+          "Tricep stretch (30 seconds each arm)",
+          "Child's pose (1 minute)"
+        ],
+        "equipment": []
+      }
+    ],
+    "cardio": [
+      {
+        "name": "Warm-up",
+        "duration": 300,
+        "description": "Light cardio to prepare your body for the workout",
+        "instructions": [
+          "March in place for 1 minute",
+          "Jumping jacks for 1 minute",
+          "High knees for 1 minute",
+          "Butt kicks for 1 minute",
+          "Light stretching for 1 minute"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Jumping Jacks",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Full body cardio exercise that increases heart rate",
+        "instructions": [
+          "Stand with feet together and arms at sides",
+          "Jump and spread legs while raising arms overhead",
+          "Jump back to starting position",
+          "Maintain a quick, steady rhythm",
+          "Keep your core engaged throughout"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "High Knees",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Cardio exercise that targets your lower body and core",
+        "instructions": [
+          "Stand with feet hip-width apart",
+          "Run in place, lifting knees as high as possible",
+          "Aim to bring knees to hip level",
+          "Swing arms naturally as if running",
+          "Maintain a quick pace"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Mountain Climbers",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Dynamic exercise that works multiple muscle groups while raising heart rate",
+        "instructions": [
+          "Start in a plank position",
+          "Alternate bringing knees toward chest",
+          "Keep your core tight and back flat",
+          "Maintain a quick pace",
+          "Breathe steadily throughout"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Burpees",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Full body exercise that combines strength and cardio",
+        "instructions": [
+          "Start standing, then squat down",
+          "Place hands on floor and jump feet back to plank",
+          "Do a push-up (optional)",
+          "Jump feet back to hands",
+          "Jump up with arms overhead"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Squat Jumps",
+        "duration": 60,
+        "rest": 30,
+        "sets": 3,
+        "description": "Explosive lower body exercise that elevates heart rate",
+        "instructions": [
+          "Stand with feet shoulder-width apart",
+          "Lower into a squat position",
+          "Jump explosively upward",
+          "Land softly back in squat position",
+          "Immediately repeat"
+        ],
+        "equipment": []
+      },
+      {
+        "name": "Cool Down",
+        "duration": 300,
+        "description": "Light activity and stretching to gradually lower heart rate",
+        "instructions": [
+          "Walk in place for 1 minute",
+          "Quad stretch (30 seconds each leg)",
+          "Hamstring stretch (30 seconds each leg)",
+          "Calf stretch (30 seconds each leg)",
+          "Deep breathing for 1 minute"
+        ],
+        "equipment": []
+      }
+    ]
+  },
+  "motivationalQuotes": [
+    {
+      "quote": "The only bad workout is the one that didn't happen.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "No matter how slow you go, you're still lapping everyone on the couch.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "Strength does not come from the body. It comes from the will.",
+      "author": "Gandhi"
+    },
+    {
+      "quote": "The difference between try and triumph is a little umph.",
+      "author": "Marvin Phillips"
+    },
+    {
+      "quote": "The hardest lift of all is lifting your butt off the couch.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "You don't have to be great to start, but you have to start to be great.",
+      "author": "Zig Ziglar"
+    },
+    {
+      "quote": "The only place where success comes before work is in the dictionary.",
+      "author": "Vidal Sassoon"
+    },
+    {
+      "quote": "Your body can stand almost anything. It's your mind that you have to convince.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "The pain you feel today will be the strength you feel tomorrow.",
+      "author": "Unknown"
+    },
+    {
+      "quote": "If it doesn't challenge you, it doesn't change you.",
+      "author": "Fred DeVito"
+    },
+    {
+      "quote": "Fitness is not about being better than someone else. It's about being better than you used to be.",
+      "author": "Khloe Kardashian"
+    },
+    {
+      "quote": "Take care of your body. It's the only place you have to live.",
+      "author": "Jim Rohn"
+    },
+    {
+      "quote": "Exercise is king. Nutrition is queen. Put them together and you've got a kingdom.",
+      "author": "Jack LaLanne"
+    },
+    {
+      "quote": "The body achieves what the mind believes.",
+      "author": "Napoleon Hill"
+    },
+    {
+      "quote": "The clock is ticking. Are you becoming the person you want to be?",
+      "author": "Greg Plitt"
+    },
+    {
+      "quote": "Don't count the days, make the days count.",
+      "author": "Muhammad Ali"
+    },
+    {
+      "quote": "The successful warrior is the average man, with laser-like focus.",
+      "author": "Bruce Lee"
+    },
+    {
+      "quote": "Discipline is the bridge between goals and accomplishment.",
+      "author": "Jim Rohn"
+    },
+    {
+      "quote": "The greatest wealth is health.",
+      "author": "Virgil"
+    },
+    {
+      "quote": "Success usually comes to those who are too busy to be looking for it.",
+      "author": "Henry David Thoreau"
+    }
+  ],
+  "dietPlan": {
+    "dailyNutrition": {
+      "calories": 2000,
+      "protein": {
+        "amount": "56g",
+        "percentage": 25,
+        "description": "Essential for muscle repair and growth"
+      },
+      "carbohydrates": {
+        "amount": "275g",
+        "percentage": 55,
+        "description": "Primary energy source, choose complex carbs over simple sugars"
+      },
+      "fats": {
+        "amount": "44g",
+        "percentage": 20,
+        "description": "Important for hormone production and nutrient absorption"
+      },
+      "fiber": {
+        "amount": "30g",
+        "description": "Aids digestion and helps maintain healthy blood sugar levels"
+      },
+      "water": {
+        "amount": "3-4 liters",
+        "description": "Essential for all bodily functions and optimal performance"
+      }
+    },
+    "keralaCuisine": [
+      {
+        "name": "Brown Rice",
+        "category": "Carbohydrates",
+        "nutritionalValue": "High in fiber, vitamins, and minerals",
+        "healthBenefits": "Better than white rice for blood sugar control",
+        "recommended": true
+      },
+      {
+        "name": "Red Rice",
+        "category": "Carbohydrates",
+        "nutritionalValue": "Rich in iron and antioxidants",
+        "healthBenefits": "Helps improve hemoglobin levels",
+        "recommended": true
+      },
+      {
+        "name": "Tapioca (Kappa)",
+        "category": "Carbohydrates",
+        "nutritionalValue": "Good source of energy and vitamin C",
+        "healthBenefits": "Consume in moderation due to high carb content",
+        "recommended": true,
+        "portionControl": "Limit to small portions"
+      },
+      {
+        "name": "Green Peas",
+        "category": "Protein/Vegetables",
+        "nutritionalValue": "Good source of plant protein and fiber",
+        "healthBenefits": "Supports muscle growth and digestive health",
+        "recommended": true
+      },
+      {
+        "name": "Carrot",
+        "category": "Vegetables",
+        "nutritionalValue": "Rich in beta-carotene and antioxidants",
+        "healthBenefits": "Promotes eye health and immune function",
+        "recommended": true
+      },
+      {
+        "name": "Cucumber",
+        "category": "Vegetables",
+        "nutritionalValue": "High water content, low calories",
+        "healthBenefits": "Hydrating and good for weight management",
+        "recommended": true
+      },
+      {
+        "name": "Coconut",
+        "category": "Fats",
+        "nutritionalValue": "Contains medium-chain triglycerides",
+        "healthBenefits": "Use in moderation due to high saturated fat content",
+        "recommended": true,
+        "portionControl": "Use sparingly"
+      },
+      {
+        "name": "Fish (Sardines, Mackerel)",
+        "category": "Protein",
+        "nutritionalValue": "High in omega-3 fatty acids and protein",
+        "healthBenefits": "Supports heart and brain health",
+        "recommended": true
+      },
+      {
+        "name": "Bitter Gourd (Pavakka)",
+        "category": "Vegetables",
+        "nutritionalValue": "Low in calories, high in vitamins",
+        "healthBenefits": "Helps regulate blood sugar levels",
+        "recommended": true
+      },
+      {
+        "name": "Drumstick (Muringa)",
+        "category": "Vegetables",
+        "nutritionalValue": "Rich in vitamins, minerals, and antioxidants",
+        "healthBenefits": "Anti-inflammatory properties",
+        "recommended": true
+      },
+      {
+        "name": "Black Tea",
+        "category": "Beverages",
+        "nutritionalValue": "Contains antioxidants",
+        "healthBenefits": "Drink without sugar for best benefits",
+        "recommended": true,
+        "portionControl": "Limit to 2-3 cups daily"
+      },
+      {
+        "name": "Banana Chips",
+        "category": "Snacks",
+        "nutritionalValue": "High in calories and fat when fried",
+        "healthBenefits": "Limited nutritional value",
+        "recommended": false,
+        "healthierAlternative": "Fresh bananas or baked banana chips"
+      },
+      {
+        "name": "Jaggery (Sharkara)",
+        "category": "Sweeteners",
+        "nutritionalValue": "Contains some minerals unlike refined sugar",
+        "healthBenefits": "Still high in calories, use sparingly",
+        "recommended": false,
+        "healthierAlternative": "Fresh fruits for sweetness"
+      },
+      {
+        "name": "Fried Snacks (Parippu Vada, Uzhunnu Vada)",
+        "category": "Snacks",
+        "nutritionalValue": "High in unhealthy fats and calories",
+        "healthBenefits": "Limited nutritional value",
+        "recommended": false,
+        "healthierAlternative": "Steamed snacks or roasted legumes"
+      },
+      {
+        "name": "Coconut Oil",
+        "category": "Fats",
+        "nutritionalValue": "High in saturated fats",
+        "healthBenefits": "Use in moderation",
+        "recommended": true,
+        "portionControl": "Limit to small amounts"
+      }
+    ],
+    "avoidList": [
+      {
+        "category": "Added Sugars",
+        "items": ["White sugar", "Candy", "Sweetened beverages", "Desserts"],
+        "reason": "Leads to weight gain, blood sugar spikes, and increased risk of diabetes"
+      },
+      {
+        "category": "Refined Carbohydrates",
+        "items": ["White rice (in excess)", "White bread", "Processed flour products"],
+        "reason": "Quickly converts to sugar, causing energy crashes and weight gain"
+      },
+      {
+        "category": "Fried Foods",
+        "items": ["Deep-fried snacks", "Fried banana chips", "Fried meat"],
+        "reason": "High in unhealthy fats and calories, linked to heart disease"
+      },
+      {
+        "category": "Processed Foods",
+        "items": ["Packaged snacks", "Ready-to-eat meals", "Processed meats"],
+        "reason": "Often high in sodium, preservatives, and unhealthy fats"
+      }
+    ],
+    "mealPlanTips": [
+      "Include protein with every meal to support muscle maintenance",
+      "Fill half your plate with vegetables for essential nutrients",
+      "Choose whole grains over refined grains for better nutrition",
+      "Stay hydrated throughout the day",
+      "Eat mindfully and slowly to recognize fullness cues",
+      "Prepare meals at home to control ingredients and portions",
+      "Include a variety of colors in your meals for different nutrients"
+    ]
+  }
+}
+

@@ -1,0 +1,8 @@
+{
+  "/dashboard/workout/page": "app/dashboard/workout/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/weight-tracker/page": "app/dashboard/weight-tracker/page.js",
+  "/dashboard/history/page": "app/dashboard/history/page.js",
+  "/dashboard/profile/page": "app/dashboard/profile/page.js",
+  "/dashboard/diet-plan/page": "app/dashboard/diet-plan/page.js"
+}
